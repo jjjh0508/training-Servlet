@@ -11,16 +11,22 @@ import java.io.PrintWriter;
 
 @WebServlet("/delivery")
 public class Delivery extends HttpServlet {
-    String delivery = "이상우";
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String delivery = "이상우";
         String name = (String)  req.getAttribute("name");
         String kind = (String)  req.getAttribute("kind");
         String spicy = (String)  req.getAttribute("spicy");
-        String topping = (String)  req.getAttribute("topping");
+        String[] toppings = (String[]) req.getAttribute("toppings");
         String addr = (String)  req.getAttribute("addr");
+        System.out.println(delivery);
 
+        StringBuilder stringBuilder = new StringBuilder();
+        for (String topping : toppings) {
+            stringBuilder.append(topping+" ");
+        }
 
         StringBuilder sb= new StringBuilder();
         sb.append("<!doctype html>\n")
@@ -34,7 +40,9 @@ public class Delivery extends HttpServlet {
                 .append("<label> 종류 : </label>"+kind)
                 .append("<label> 맵기 : </label>"+spicy)
                 .append("</br>")
-                .append("<label> 토핑종류 :</label>"+topping)
+                .append("<label> 토핑종류 :</label>"+stringBuilder)
+                .append("</br>")
+                .append("<label> 주소 : </label>"+addr)
                 .append("</br>")
                 .append("<label> 배달부이름:</label>"+delivery)
                 .append("</br>")

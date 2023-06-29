@@ -21,11 +21,12 @@
     <input type="radio" name="spicy" id="spicymedium" value="중간맵기"><label for="spicymedium">중간맵기</label>
     <input type="radio" name="spicy" id="spicytop" value="최강"><label for="spicytop">최강</label>
     <br/>
+    <!--체크 박스로 바꾸기-->
     <label>떡볶이 토핑 선택</label>
-    <input type="radio" name="topping" id="chinese" value="중국당면"><label for="chinese">중국당면</label>
-    <input type="radio" name="topping" id="dumpling" value="바싹치즈만두"><label for="dumpling">바싹치즈만두</label>
-    <input type="radio" name="topping" id="gimmari" value="김말이"><label for="gimmari">김말이</label>
-    <input type="radio" name="topping" id="riceball" value="주먹밥"><label for="riceball">주먹밥</label>
+    <input type="checkbox" name="topping" id="chinese" value="중국당면"><label for="chinese">중국당면</label>
+    <input type="checkbox" name="topping" id="dumpling" value="바싹치즈만두"><label for="dumpling">바싹치즈만두</label>
+    <input type="checkbox" name="topping" id="gimmari" value="김말이"><label for="gimmari">김말이</label>
+    <input type="checkbox" name="topping" id="riceball" value="주먹밥"><label for="riceball">주먹밥</label>
     <br/>
     <label>주문지 주소</label>
     <input type="text" name="addr">
